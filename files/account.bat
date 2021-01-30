@@ -1,3 +1,4 @@
+ECHO off
 ECHO Do you want to create new account?
 set /p check="Type Yes(Y) or No(N): "
 
