@@ -6,13 +6,13 @@ IF "%check%"=="Y" (
   set /p user="Enter your new Username: "
   set /p pass="Enter your new account password: "
   net user %user% %pass% /add
-  net localgroup administrators $user% /add
+  net localgroup administrators %user% /add
 )
 IF "%check%"=="Yes" (
   set /p user="Enter your new Username: "
   set /p pass="Enter your new account password: "
   net user %user% %pass% /add
-  net localgroup administrators $user% /add
+  net localgroup administrators %user% /add
 )
 
 cd %USERPROFILE%\Winfree
