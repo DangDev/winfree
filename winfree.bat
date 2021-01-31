@@ -11,17 +11,17 @@ Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v C
 cd %USERPROFILE%
 mkdir WinFree
 cd Winfree
-certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/curl.exe
-certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.dll
-certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.exe
-certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/nircmd.exe
-certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/account.bat
-curl -LJOk https://raw.githubusercontent.com/DangDev/winfree/main/files/ngrok-stable-windows-amd64.zip
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/curl.exe
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.dll
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.exe
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/nircmd.exe
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/account.bat
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/ngrok-stable-windows-amd64.zip
 7z x ngrok-stable-windows-amd64.zip
 
 
-curl -LJOk https://raw.githubusercontent.com/DangDev/winfree/main/files/ChromeSetup.exe
-curl -LJOk https://raw.githubusercontent.com/DangDev/winfree/main/files/anti-close.bat
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/ChromeSetup.exe
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/anti-close.bat
 powershell [Reflection.Assembly]::LoadWithPartialName("""System.Windows.Forms""");[Windows.Forms.MessageBox]::show("""Don't close chrome manually! You will get error!""", """Must read!""",0)>nul
 start ChromeSetup.exe
 cls
