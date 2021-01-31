@@ -10,6 +10,17 @@ Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v C
 
 cd %USERPROFILE%
 mkdir WinFree
+
+@echo off
+set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
+echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
+echo sLinkFile = "%USERPROFILE%\Desktop\WinFree.lnk" >> %SCRIPT%
+echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
+echo oLink.TargetPath = "%USERPROFILE%\WinFree" >> %SCRIPT%
+echo oLink.Save >> %SCRIPT%
+cscript /nologo %SCRIPT%
+del %SCRIPT%
+
 cd Winfree
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/curl.exe
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.dll
