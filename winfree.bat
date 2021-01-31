@@ -16,7 +16,7 @@ certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/m
 certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.exe
 certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/nircmd.exe
 certutil -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/account.bat
-curl -LJOk https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip
+curl -LJOk https://raw.githubusercontent.com/DangDev/winfree/main/files/ngrok-stable-windows-amd64.zip
 7z x ngrok-stable-windows-amd64.zip
 
 
