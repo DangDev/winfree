@@ -20,13 +20,14 @@ echo oLink.TargetPath = "%USERPROFILE%\WinFree" >> %SCRIPT%
 echo oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del %SCRIPT%
-
+@echo on
 cd Winfree
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/curl.exe
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.dll
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/7z.exe
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/nircmd.exe
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/account.bat
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/wget.exe
 certutil.exe -urlcache -split -f https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip
 7z x ngrok-stable-windows-amd64.zip
 
