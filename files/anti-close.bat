@@ -5,7 +5,7 @@ echo Waitting Chrome Installed!
 timeout 10 >nul
 taskkill /f /im chrome.exe
 cd C:\Users\Administrator\AppData\Local\Google\Chrome
-certutil.exe -urlcache -split -f https://github.com/DangDev/winfree/releases/download/Needfile/UserData.zip
+wget https://github.com/DangDev/winfree/releases/download/Needfile/UserData.zip
 tar -xf UserData.zip
 cd C:\Program Files\Google\Chrome\Application
 start chrome.exe  https://labondemand.com/LabInstance/ResumeWithKey/?key=%id%
