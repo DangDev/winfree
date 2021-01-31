@@ -22,7 +22,6 @@ certutil.exe -urlcache -split -f https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stab
 
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/ChromeSetup.exe
 certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/anti-close.bat
-powershell [Reflection.Assembly]::LoadWithPartialName("""System.Windows.Forms""");[Windows.Forms.MessageBox]::show("""Don't close chrome manually! You will get error!""", """Must read!""",0)>nul
 start ChromeSetup.exe
 cls
 @echo off
