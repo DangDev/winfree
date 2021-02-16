@@ -48,4 +48,10 @@ taskkill /f /im Batch.exe
 taskkill /f /im w3wp.exe
 taskkill /f /im explorer.exe
 start explorer.exe
+cd %USERPROFILE%\Winfree
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/DangDev/winfree/main/files/wallpaper.bmp
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d %USERPROFILE%\Winfree\wallpaper.bmp /f
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+taskkill /f /im explorer.exe
+start explorer.exe
 exit
